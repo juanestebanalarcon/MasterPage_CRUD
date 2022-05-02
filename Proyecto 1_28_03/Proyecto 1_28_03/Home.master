@@ -1,0 +1,96 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Home.master.cs" Inherits="Home" %>
+<!DOCTYPE html>
+<html>
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>
+        <asp:ContentPlaceHolder id="title" runat="server">
+
+        </asp:ContentPlaceHolder>
+    </title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        body {
+            margin: 0;
+            padding:0;
+        }
+        #navigation {
+            list-style-type:none;
+            padding:0;
+            margin:0;
+            background-color:darkgreen;
+            color:white;
+            text-align:center;
+            align-items: center;
+            padding-left: 100px;
+
+        }
+     #navigation   li {
+            float:left;
+            display:inline;
+            padding: 15px;
+        }
+       #navigation a {
+            text-decoration:none;
+            font-size: 1.6em;
+            text-transform: uppercase;
+            text-shadow: 0 0 0.3em #464646;
+            font-weight: bold;
+            font-family:century gothic;
+            color:white;
+
+        }
+     #navigation li a:hover {
+            background-color:chartreuse;
+        }
+        #menu {
+            background-color:darkgreen;
+            width:100%;
+            height:66px;
+            top:0;
+            display:flex;
+            position:fixed;
+            vertical-align:middle;
+            justify-content: space-between;
+        }
+        #searchBtn {
+            color: white;
+            font-size: 16px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            border-radius: 10px;
+            text-align:center;
+            background-color:lightslategrey;
+  
+        }
+        #logo {
+    float: left;
+    top: 0;
+    width: 100px;
+    height: 66px;
+    position: fixed;
+        }
+    </style>
+</head>
+<body>
+    <div id="menu">
+        <div id="logo">
+            <img src="log/logo_.jpeg"  style="height:100%; width:100%;" />
+            </div>
+        <ul id="navigation">
+            <li><a href="Default.aspx">WC</a></li>
+            <li><a href="subParts.aspx">Sub Parts</a></li>
+            <li><a href="newWC.aspx">New WC</a></li>
+            <li><a href="newSubPart.aspx">New Sub Part</a></li>
+            <li><a href="gapAnalysis.aspx">Gap Analysis</a></li>
+            <li><a href="Labels.aspx">Labels</a></li>
+        </ul>
+        </div>
+         
+<asp:ContentPlaceHolder ID="body" runat="server">
+
+</asp:ContentPlaceHolder>
+
+    
+</body>
+</html>
